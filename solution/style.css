@@ -1,0 +1,53 @@
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  margin: 2vh 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+main div {
+  width: 35%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+main div img {
+  max-width: 80%;
+  border-radius: 3vw;
+}
+
+main div .position {
+  display: inline-block;
+  max-width: 100%;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  font-size: 2vw;
+}
+
+main div .name {
+  width: 80%;
+  text-align: center;
+  font-size: 3vw;
+}
+
+main div:nth-child(even) {
+  margin-top: 10vh;
+}
+/*# sourceMappingURL=style.css.map */
