@@ -1,0 +1,63 @@
+@mixin perfectCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin gridBox {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    grid-template-rows: 9fr 1fr 2fr;
+    grid-template-areas: 
+    'img pos'
+    'namee pos2'
+    'name2 .';
+}
+
+
+@mixin onelineTwoImg {
+    
+    &:nth-child(even) {
+        grid-template-rows: 4fr 9fr 1fr;
+
+        img {
+            grid-area: namee;
+        }
+        .position {
+            grid-area: pos2;
+        }
+        .name {
+            grid-area: name2;
+        }
+    }
+    &:nth-child(odd) {
+        grid-template-rows: 9fr 1fr 4fr;
+    }
+}
+
+
+@mixin onelineThreeImg {
+    &:nth-child(3n+2) {
+        grid-template-rows: 2fr 9fr 1fr;
+
+        img {
+            grid-area: namee;
+        }
+        .position {
+            grid-area: pos2;
+        }
+        .name {
+            grid-area: name2;
+        }
+    }
+    &:nth-child(1), &:nth-child(3), &:nth-child(4), &:nth-child(6) {
+        grid-template-rows: 9fr 1fr 2fr;
+    }
+
+    img {
+        max-width: 75%;
+    }
+    .name {
+        width: 75%;
+    }
+}

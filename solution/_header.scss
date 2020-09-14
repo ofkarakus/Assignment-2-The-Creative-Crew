@@ -1,0 +1,23 @@
+header {
+    @include perfectCenter;
+    flex-direction: column;
+    padding-top: 2vh;
+    margin-bottom: 5vh;
+    
+    div {
+        flex: 1 1 40%;
+        @include perfectCenter;
+        flex-direction: column;
+        margin: 1rem;
+        text-align: center;
+
+        &.title {
+            font-size: 1.5rem;
+        }
+
+        &.description {
+            padding: 0 2rem 0;
+            font-size: 1.3rem;
+        }
+    }
+}

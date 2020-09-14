@@ -1,0 +1,36 @@
+main {
+    margin: 2vh 3vw;
+    display: flex;
+    flex-flow: row wrap;
+    div {
+        width: 55%;
+        flex: 1 1 auto;
+        @include gridBox;
+        justify-items: center;
+        gap: 0.3rem;
+        
+        img {
+            grid-area: img;
+            max-width: 60%;
+            width: 100%;
+            border-radius: 1vw;
+            justify-self: end;
+        }
+
+        .position {
+            grid-area: pos;
+            writing-mode: vertical-lr;
+            font-size: 1.5rem;
+            justify-self: start;
+            align-self: start;
+        }
+
+        .name {
+            grid-area: namee;
+            font-size: 2rem;
+            width: 60%;
+            justify-self: end;
+            text-align: center;
+        }
+    }
+}
