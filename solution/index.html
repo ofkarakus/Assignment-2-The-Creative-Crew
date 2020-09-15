@@ -7,6 +7,13 @@
         <title>The Creative Crew</title>
     </head>
     <body>
+
+        <label class="form-switch">
+                <input type="checkbox" onchange="darkMode()">
+                <i></i>
+                Dark Mode
+        </label>
+
         <header>
             <div class="title">
                 <h1 id="title__h1">The Creative Crew</h1>
@@ -59,5 +66,12 @@
                 <p class="name">Stan John</p>
             </div>
         </main>
+
+        <script>
+            function darkMode() {
+                var element = document.querySelector("body");
+                element.classList.toggle("turnoff")
+            }
+        </script>
     </body>
 </html>
